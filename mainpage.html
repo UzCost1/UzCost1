@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UzCost Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #2563eb;
+            --accent-color: #facc15;
+            --text-color: #f3f4f6;
+            --background-color: #1e293b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: var(--primary-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: 700;
+            color: var(--accent-color);
+        }
+
+        input[type="text"] {
+            padding: 12px 15px;
+            border: none;
+            border-radius: 8px;
+            width: 300px;
+            font-size: 1em;
+            color: #000;
+        }
+
+        button {
+            padding: 12px 20px;
+            margin-left: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: var(--secondary-color);
+            color: var(--text-color);
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            color: #1e293b;
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-top: 10px;
+            border-radius: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .categories, .recommendations {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px;
+            flex-wrap: wrap;
+        }
+
+        .category, .product {
+            background-color: #334155;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+            width: 220px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .category:hover, .product:hover {
+            transform: translateY(-10px);
+            background-color: var(--secondary-color);
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background-color: var(--primary-color);
+            color: var(--text-color);
+            margin-top: auto;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .subcategory-list {
+            margin: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .subcategory {
+            background-color: #475569;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .subcategory:hover {
+            background-color: var(--accent-color);
+            color: #1e293b;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">UzCost</div>
+        <input type="text" placeholder="🔍 Поиск товаров...">
+        <div>
+            <button>Войти</button>
+            <button>🛒 Корзина</button>
+        </div>
+    </header>
+
+    <section class="banner">
+        🚀 Добро пожаловать на UzCost — вашу оптовую платформу!
+    </section>
+
+    <section class="categories">
+        <a href="groceries.html" class="category">🍇 Продукты питания</a>
+        <div class="category">🏗️ Строительные материалы</div>
+        <div class="category">👗 Одежда и текстиль</div>
+        <div class="category">💻 Электроника</div>
+        <div class="category">⚙️ Промышленное оборудование</div>
+        <div class="category">🚚 Логистика и доставка</div>
+    </section>
+
+    <section class="recommendations">
+        <div class="product">🔥 Популярный товар 1</div>
+        <div class="product">🌱 Новый товар 2</div>
+        <div class="product">💸 Акционный товар 3</div>
+        <div class="product">⭐ Рекомендуемый товар 4</div>
+        <div class="product">🔋 Инновационный товар 5</div>
+        <div class="product">🏆 Топовый товар 6</div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 UzCost. Все права защищены.</p>
+    </footer>
+</body>
+</html>
+
+<!-- products-food.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукты питания - UzCost</title>
+    <style>
+        body {
+            background-color: #1e293b;
+            color: #f3f4f6;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #facc15;
+        }
+
+        .subcategory-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .subcategory {
+            background-color: #475569;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .subcategory:hover {
+            background-color: #facc15;
+            color: #1e293b;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+</html>
